@@ -1,54 +1,56 @@
-import React, { useState } from 'react';
-import { Mail, MapPin, Linkedin, Github, Twitter, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, MapPin, Linkedin, Github, Twitter, Send } from "lucide-react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    console.log("Form submitted:", formData);
+
+    // Reset form after submission
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <div className="min-h-screen py-16 lg:py-24">
+    <div className="min-h-screen py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Let's Work Together
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            I'm open to freelance projects, collaborations, and speaking engagements. 
-            Let's create something impactful together.
+            I’m open to freelance projects, collaborations, and speaking
+            engagements. Let’s create something impactful together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info Section */}
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Get In Touch
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Whether you have a project in mind, need consultation on accessibility, 
-                or want to discuss opportunities, I'd love to hear from you. 
-                I respond to all inquiries within 24 hours.
+                Whether you have a project in mind, need consultation, or want
+                to discuss opportunities, I’d love to hear from you. I respond
+                to all inquiries within 24 hours.
               </p>
             </div>
 
@@ -59,9 +61,13 @@ const Contact: React.FC = () => {
                   <Mail className="text-purple-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">mamphetengdesigns@gmail.com</p>
-                  <p className="text-sm text-gray-500">Response within 4 hours</p>
+                  <h3 className="font-bold text-gray-900">Email</h3>
+                  <p className="text-gray-600">
+                    mamphetengdesigns@gmail.com
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Response within 4 hours
+                  </p>
                 </div>
               </div>
 
@@ -70,48 +76,53 @@ const Contact: React.FC = () => {
                   <MapPin className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Location</h3>
+                  <h3 className="font-bold text-gray-900">Location</h3>
                   <p className="text-gray-600">Lesotho</p>
-                  <p className="text-sm text-gray-500">Remote work available worldwide</p>
+                  <p className="text-sm text-gray-500">
+                    Remote work available worldwide
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Social Media */}
+            {/* Social Links */}
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
-                  className="p-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors duration-200 hover:scale-110 transform"
+                  href="https://www.linkedin.com/in/mampheteng-koote-277950270/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 hover:scale-110 transition"
                 >
                   <Linkedin size={24} />
                 </a>
                 <a
-                  href="#"
-                  className="p-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors duration-200 hover:scale-110 transform"
+                  href="https://github.com/Mampheteng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 hover:scale-110 transition"
                 >
                   <Github size={24} />
                 </a>
                 <a
-                  href="#"
-                  className="p-3 bg-blue-100 text-blue-400 rounded-lg hover:bg-blue-200 transition-colors duration-200 hover:scale-110 transform"
+                  href="https://x.com/Mamphetengkoote"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-blue-100 text-blue-400 rounded-lg hover:bg-blue-200 hover:scale-110 transition"
                 >
                   <Twitter size={24} />
                 </a>
               </div>
             </div>
 
-            {/* Services Available */}
+            {/* Services */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 rounded-xl">
               <h3 className="font-bold mb-4">Available For:</h3>
               <ul className="space-y-2 text-sm">
                 <li>• UI/UX Design Projects</li>
                 <li>• Frontend Development</li>
                 <li>• Sign Language Interpretation</li>
-                <li>• Accessibility Consulting</li>
-                <li>• Speaking Engagements</li>
-                <li>• Workshop & Training Sessions</li>
               </ul>
             </div>
           </div>
@@ -121,10 +132,14 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Send Me a Message
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -134,13 +149,17 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
                   placeholder="Enter your full name"
                 />
               </div>
 
+              {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Email Address
                 </label>
                 <input
@@ -150,13 +169,17 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
                   placeholder="your.email@example.com"
                 />
               </div>
 
+              {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -166,14 +189,15 @@ const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-colors duration-200 resize-none"
-                  placeholder="Tell me about your project, goals, and how I can help you..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none resize-none"
+                  placeholder="Tell me about your project..."
                 />
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-semibold hover:scale-105 transition transform flex items-center justify-center gap-2"
               >
                 <Send size={20} />
                 Send Message
@@ -181,7 +205,7 @@ const Contact: React.FC = () => {
             </form>
 
             <p className="text-sm text-gray-500 text-center mt-6">
-              I'll get back to you within 24 hours. Looking forward to hearing from you!
+              I’ll get back to you within 24 hours.
             </p>
           </div>
         </div>

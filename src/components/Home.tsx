@@ -1,6 +1,10 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
+// Import your screenshots
+import voice2signScreenshot from "../assets/images/voice2sign-screenshot.png";
+import evDashboardScreenshot from '../assets/images/ev-dashboard-screenshot.png';
+import propertyHiveScreenshot from '../assets/images/propertyhive-screenshot.png';
 interface HomeProps {
   setCurrentPage: (page: string) => void;
 }
@@ -52,25 +56,31 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mampheteng-koote-277950270/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 hover:scale-110 transform"
               >
                 <Linkedin size={24} className="text-blue-600" />
               </a>
               <a
-                href="#"
+                href="https://github.com/Mampheteng"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 hover:scale-110 transform"
               >
                 <Github size={24} className="text-gray-800" />
               </a>
               <a
-                href="#"
+                href="https://x.com/Mamphetengkoote"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 hover:scale-110 transform"
               >
                 <Twitter size={24} className="text-blue-400" />
               </a>
               <a
-                href="#"
+                href="mailto:mamphetengdesigns@gmail.com"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 hover:scale-110 transform"
               >
                 <Mail size={24} className="text-purple-600" />
@@ -108,9 +118,15 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Voice2Sign Preview */}
+            {/* Voice2Sign */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-              <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600"></div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={voice2signScreenshot}
+                  alt="Voice2Sign Preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Voice2Sign</h3>
                 <p className="text-gray-600 text-sm mb-4">
@@ -123,9 +139,15 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Property Hive Preview */}
+            {/* Property Hive */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={propertyHiveScreenshot}
+                  alt="Property Hive Preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Property Hive</h3>
                 <p className="text-gray-600 text-sm mb-4">
@@ -138,9 +160,15 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Electric Car Dashboard Preview */}
+            {/* EV Dashboard */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-              <div className="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={evDashboardScreenshot}
+                  alt="EV Dashboard Preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">EV Dashboard</h3>
                 <p className="text-gray-600 text-sm mb-4">

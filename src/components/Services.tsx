@@ -49,7 +49,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       description: 'Concepts and prototypes for health tech and education tech',
       details: [
         'IoT system design and prototyping',
-        'Health technology solutions',
+        
         'Educational technology development',
         'Smart device interfaces'
       ],
@@ -116,12 +116,12 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understanding your needs, goals, and target audience' },
               { step: '02', title: 'Strategy', description: 'Developing a comprehensive plan and approach' },
               { step: '03', title: 'Design & Develop', description: 'Creating and building the solution with precision' },
-              { step: '04', title: 'Launch & Optimize', description: 'Deploying and continuously improving the result' }
+             
             ].map((phase, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

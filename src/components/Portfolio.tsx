@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight } from 'lucide-react';
+import evDashboardScreenshot from '../assets/images/ev-dashboard-screenshot.png';
+import propertyHiveScreenshot from '../assets/images/propertyhive-screenshot.png';
+import lesrenScreenshot from "../assets/images/lesren-screenshot.png";
+import subwayIndustriesScreenshot from "../assets/images/subway-industries-screenshot.png";
+import impactSchoolScreenshot from "../assets/images/impact-school-screenshot.png";
+import marySaloonDesignScreenshot from "../assets/images/mary-saloon-design-screenshot.png";
+import agrohubScreenshot from "../assets/images/agrohub-screenshot.png";
+import voice2signScreenshot from "../assets/images/voice2sign-screenshot.png";
 
 const Portfolio: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -15,7 +23,8 @@ const Portfolio: React.FC = () => {
       solution: 'Developed a mobile-first application that translates spoken language into animated sign language and vice versa, enhancing independence and accessibility.',
       process: 'User research → Wireframes → Design → Frontend Implementation',
       features: ['Emergency Alerts', 'Sign Language Animation', 'Conversation History'],
-      gradient: 'from-purple-500 to-blue-600'
+      gradient: 'from-purple-500 to-blue-600',
+      images: voice2signScreenshot
     },
     {
       id: 'property-hive',
@@ -27,7 +36,8 @@ const Portfolio: React.FC = () => {
       solution: 'Introduced a structured receipt flow with distinct states (Success, Pending, Failed), enhancing user understanding and reducing inquiries.',
       process: 'Analysis → User Flow → Design → Testing',
       features: ['Payment Status Indicators', 'Download Functionality', 'Clear Visual Hierarchy'],
-      gradient: 'from-green-500 to-teal-600'
+      gradient: 'from-green-500 to-teal-600',
+      images: propertyHiveScreenshot
     },
     {
       id: 'ev-dashboard',
@@ -39,7 +49,8 @@ const Portfolio: React.FC = () => {
       solution: 'Designed a clean, centralized dashboard that displays speed, battery levels, and other key data intuitively.',
       process: 'Research → Information Architecture → Prototyping → Testing',
       features: ['Real-time Monitoring', 'Intuitive Controls', 'Performance Analytics'],
-      gradient: 'from-orange-500 to-red-600'
+      gradient: 'from-orange-500 to-red-600',
+      images: evDashboardScreenshot
     },
     {
       id: 'lesren',
@@ -51,19 +62,21 @@ const Portfolio: React.FC = () => {
       solution: 'Created an inclusive and engaging design using bold visuals, clear navigation, and mobile responsiveness.',
       process: 'Audit → Strategy → Design → Implementation',
       features: ['Responsive Design', 'Accessibility Features', 'Modern UI'],
-      gradient: 'from-blue-500 to-indigo-600'
+      gradient: 'from-blue-500 to-indigo-600',
+      images: lesrenScreenshot
     },
     {
       id: 'agrohub',
       title: 'AgroHub',
       role: 'Frontend Developer',
-      tools: ['HTML', 'CSS',  'Next.js','Tailwind CSS'],
+      tools: ['HTML', 'CSS', 'Next.js', 'Tailwind CSS'],
       description: 'Built the frontend for an online agricultural marketplace connecting local farmers to buyers.',
       problem: 'Farmers lacked a user-friendly digital platform to showcase products.',
       solution: 'Implemented a fully responsive interface with real-time listing features and easy navigation for buyers.',
       process: 'Planning → Development → Testing → Deployment',
       features: ['Real-time Listings', 'Farmer Profiles', 'Buyer Dashboard'],
-      gradient: 'from-yellow-500 to-green-600'
+      gradient: 'from-yellow-500 to-green-600',
+      images: agrohubScreenshot
     },
     {
       id: 'impact-school',
@@ -75,7 +88,8 @@ const Portfolio: React.FC = () => {
       solution: 'Developed clean layouts, strong calls-to-action, and responsive designs to better communicate their mission.',
       process: 'Research → Strategy → Design → Handoff',
       features: ['Modern Design', 'Clear Messaging', 'Mobile Optimization'],
-      gradient: 'from-purple-500 to-pink-600'
+      gradient: 'from-purple-500 to-pink-600',
+      images: impactSchoolScreenshot
     },
     {
       id: 'subway-industries',
@@ -87,7 +101,8 @@ const Portfolio: React.FC = () => {
       solution: 'Delivered a sleek, minimal design system with clearly defined service sections and client focus.',
       process: 'Brand Analysis → Design System → Implementation',
       features: ['Brand Consistency', 'Service Showcase', 'Client Focus'],
-      gradient: 'from-gray-600 to-blue-700'
+      gradient: 'from-gray-600 to-blue-700',
+      images: subwayIndustriesScreenshot
     },
     {
       id: 'mary-saloon',
@@ -99,9 +114,22 @@ const Portfolio: React.FC = () => {
       solution: 'Created a stylish, mobile-friendly design that makes service booking seamless and visually appealing.',
       process: 'User Journey → Design → Prototype → Testing',
       features: ['Appointment Booking', 'Service Gallery', 'Mobile-First Design'],
-      gradient: 'from-pink-500 to-rose-600'
+      gradient: 'from-pink-500 to-rose-600',
+      images: marySaloonDesignScreenshot
     }
   ];
+
+  // Mapping project IDs to Figma links
+  const projectLinks: Record<string, string> = {
+    "voice2sign": "https://www.figma.com/design/Ewd9I7o15zdrpYajUVhuok/Voice2Sign?t=zgFrxEGfMmeC0k2V-0",
+    "property-hive": "https://www.figma.com/design/1N09sixjbgL81Rmgq2uHIh/Property-Hive?node-id=2-287&p=f&t=FgMQRq5WwyhIDRpq-0",
+    "ev-dashboard": "https://www.figma.com/design/z2WKNDudE3kpEUtlwdiZRZ/Electric-car-dashboard?t=zgFrxEGfMmeC0k2V-0",
+    "lesren": "https://www.figma.com/design/8zpIKJYsiIIc8Q2fw8nlD8/LesREN3?t=zgFrxEGfMmeC0k2V-0",
+    "agrohub": "https://www.figma.com/design/wcWAgMjyiRWEN2x3jcf7gx/AgrohUb?node-id=0-1&p=f&t=zgFrxEGfMmeC0k2V-0",
+    "impact-school": "https://www.figma.com/design/F3cm1vHcyVUpkaZveAAF5W/Impact-School?t=zgFrxEGfMmeC0k2V-0",
+    "subway-industries": "https://www.figma.com/design/eVUomMcu1fQNgmClXeXWCw/Subway-Industries?t=zgFrxEGfMmeC0k2V-0",
+    "mary-saloon": "https://www.figma.com/design/EsaiEF6BUMZfqPaK6X912B/Saloon-Design?node-id=0-1&p=f&t=zgFrxEGfMmeC0k2V-0"
+  };
 
   return (
     <div className="min-h-screen py-16 lg:py-24">
@@ -125,13 +153,23 @@ const Portfolio: React.FC = () => {
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer transform hover:-translate-y-2"
               onClick={() => setSelectedProject(project.id)}
             >
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative`}>
+              <div className="h-48 relative overflow-hidden rounded-t-xl">
+                {project.images ? (
+                  <img
+                    src={project.images}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className={`w-full h-full bg-gradient-to-br ${project.gradient}`}></div>
+                )}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-xl font-bold mb-1">{project.title}</h3>
                   <p className="text-sm opacity-90">{project.role}</p>
                 </div>
               </div>
+
               <div className="p-6">
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                   {project.description}
@@ -164,10 +202,20 @@ const Portfolio: React.FC = () => {
                 
                 return (
                   <div className="p-8">
-                    <div className={`h-64 bg-gradient-to-br ${project.gradient} rounded-lg mb-8 flex items-center justify-center`}>
-                      <h2 className="text-3xl font-bold text-white">{project.title}</h2>
+                    <div className="h-54 relative overflow-hidden rounded-lg mb-8 flex items-center justify-center">
+                      {project.images ? (
+                        <img
+                          src={project.images}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className={`w-full h-full bg-gradient-to-br ${project.gradient}`}></div>
+                      )}
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <h2 className="absolute text-3xl font-bold text-white">{project.title}</h2>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Project Overview</h3>
@@ -214,11 +262,14 @@ const Portfolio: React.FC = () => {
                       >
                         Close
                       </button>
-                      <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-200 flex items-center gap-2">
-                        <a href="#" onClick={(e) => { e.preventDefault(); /* Handle live project link */ }}>
-                          View Live Project <ExternalLink size={16} />
-                        </a>
-                      </button>
+                      <a
+                        href={projectLinks[selectedProject]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-200 flex items-center gap-2"
+                      >
+                        View Live Project <ExternalLink size={16} />
+                      </a>
                     </div>
                   </div>
                 );
